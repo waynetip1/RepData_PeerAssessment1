@@ -2,9 +2,8 @@
 title: "Personal Activity Monitoring Analysis"
 author: "Wayne Tipton"
 date: "October 13, 2017"
-output:
-  md_document:
-    variant: markdown_github
+output: md_document
+    
 
 ---
 # Introduction
@@ -90,11 +89,11 @@ raw
 ```{r,plot time series, echo=TRUE}
 actDataStepsInterval <- actDataNoNa %>%
         group_by(interval)%>%
-        summarise(totalSteps = sum(steps))
+        summarise(totalSteps = mean(steps))
 #plot time series of the median steps for each day
 plot(actDataStepsInterval$interval,actDataStepsInterval$totalSteps, type = "l",
-     col="green", ylab = "Total Steps Taken", xlab = "Time Interval",
-     lwd=2, ylim = c(0,12000), main=" Total Steps per 5 min Interval")
+     col="green", ylab = "Average Steps Taken", xlab = "Time Interval",
+     lwd=2, ylim = c(0,300), main=" Average Steps per 5 min Interval")
 ```
 
 #### Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
@@ -103,7 +102,7 @@ plot(actDataStepsInterval$interval,actDataStepsInterval$totalSteps, type = "l",
 maxInterval <- filter(actDataStepsInterval,totalSteps==max(totalSteps))
 maxInterval
 ```
-Interval 835 has the max number of steps of 10927. 
+Interval 835 has the max number of steps of 206.1698. 
 
 # 2. Imputing Missing Values
 There are a number of days/intervals where there are missing values (coded as NA). The presence of missing days may introduce bias into some calculations or summaries of the data.
@@ -202,13 +201,13 @@ stepsWE <- meanInterval %>%
 par(mfrow=c(2,1))
 par(mar=c(2,2,1,1))
 plot(stepsWD$interval,stepsWD$imputedMeanSteps, type = "l",
-     lwd = 2, ylim = c(0,225), main = "Weekday Steps",
-     ylab = "Number of Steps", xlab = "Interval", col = "purple")
+     lwd = 2, ylim = c(0,225), main = "Average Weekday Steps",
+     ylab = " Average Number of Steps", xlab = "Interval", col = "purple")
 
 #plot weekends
 plot(stepsWE$interval,stepsWE$imputedMeanSteps, type = "l",
-     lwd = 2, ylim = c(0,225), main = "Weekend Steps",
-     ylab = "Number of Steps", xlab = "Interval", col = "dark green")
+     lwd = 2, ylim = c(0,225), main = "Average Weekend Steps",
+     ylab = "Average Number of Steps", xlab = "Interval", col = "dark green")
 
 ```
 
