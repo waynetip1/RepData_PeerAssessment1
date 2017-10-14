@@ -2,7 +2,10 @@
 title: "Personal Activity Monitoring Analysis"
 author: "Wayne Tipton"
 date: "October 13, 2017"
-output: html_document
+output:
+  md_document:
+    variant: markdown_github
+
 ---
 # Introduction
 It is now possible to collect a large amount of data about personal movement using activity monitoring devices such as a Fitbit, Nike Fuelband, or Jawbone Up. 
