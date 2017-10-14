@@ -110,6 +110,8 @@ Transform and Explore Data
     ##       rawMean rawMedian
     ## [1,] 10766.19     10765
 
+Mean Steps is 10766.19. Median Steps is 10765.
+
 #### What is the average daily activity pattern?
 
 #### Make a time series plot of the 5 min intervals (x-axis), and average number of steps across all days (y-axis).
@@ -213,6 +215,8 @@ The result is each NA was replaced with the mean value of 37.3826.
 
     ##      imputeMean imputeMedian
     ## [1,]   10766.19     10766.19
+
+Mean Steps is 10766.19. Median Steps is 10766.19
 
 #### What is the impact of imputing missing data?
 

@@ -83,6 +83,10 @@ rawMedian <- median(actDataStepsDay$totalSteps)
 raw <- cbind(rawMean,rawMedian)
 raw
 ```
+
+Mean Steps is 10766.19. 
+Median Steps is 10765.
+
 #### What is the average daily activity pattern?
 #### Make a time series plot of the 5 min intervals (x-axis), and average number of steps across all days (y-axis).
 
@@ -152,6 +156,9 @@ imputeMedian <- median(actDataStepsImpute$totalSteps)
 imputed <- cbind(imputeMean,imputeMedian)
 imputed
 ```
+
+Mean Steps is 10766.19.
+Median Steps is 10766.19
 
 #### What is the impact of imputing missing data?
 
