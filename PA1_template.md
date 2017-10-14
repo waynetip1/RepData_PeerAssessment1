@@ -49,8 +49,8 @@ are a total of 17,568 observations in this dataset.
     # read data
     activityData <- fread("activity.csv",na.strings = c("NA"))
 
-1. Transform and Explore Data
-=============================
+Transform and Explore Data
+==========================
 
 #### Remove missing data, change variable attributes.
 
@@ -136,8 +136,8 @@ are a total of 17,568 observations in this dataset.
 
 Interval 835 has the max number of steps of 206.1698.
 
-2. Imputing Missing Values
-==========================
+Imputing Missing Values
+=======================
 
 There are a number of days/intervals where there are missing values
 (coded as NA). The presence of missing days may introduce bias into some
