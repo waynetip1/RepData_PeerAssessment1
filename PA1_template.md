@@ -42,8 +42,9 @@ are a total of 17,568 observations in this dataset.
     pathdata <- "./"
     list.files("./")
 
-    ## [1] "activity.csv"     "activity.zip"     "finalActivity.R" 
-    ## [4] "PA1_template.Rmd"
+    ## [1] "activity.csv"       "activity.zip"       "doc"               
+    ## [4] "finalActivity.R"    "instructions_fig"   "PA1_template.html" 
+    ## [7] "PA1_template.md"    "PA1_template.Rmd"   "PA1_template_files"
 
     # read data
     activityData <- fread("activity.csv",na.strings = c("NA"))
@@ -279,7 +280,7 @@ weekends?
 
     # plot weekdays
     par(mfrow=c(2,1))
-    par(mar=c(2,2,1,1))
+    par(mar=c(2,2,2,2))
     plot(stepsWD$interval,stepsWD$imputedMeanSteps, type = "l",
          lwd = 2, ylim = c(0,225), main = "Average Weekday Steps",
          ylab = " Average Number of Steps", xlab = "Interval", col = "purple")
